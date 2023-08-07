@@ -1,0 +1,1045 @@
+#VRML_SIM R2023b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the Pib - Humanoid Robot (https://pib.rocks)
+# Extracted from: /home/pib/pib/pib.urdf
+
+PROTO Pib - Humanoid Robot (https://pib.rocks) [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "Pib - Humanoid Robot (https://pib.rocks)"  # Is `Robot.name`.
+  field  SFString    controller      "void"                                      # Is `Robot.controller`.
+  field  MFString    controllerArgs  []                                          # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""                                          # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE                                       # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE                                        # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE                                       # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          position 3.141593
+          axis -0.000009 -0.000008 0.999993
+          anchor -0.181570 0.034690 0.311950
+        }
+        device [
+          RotationalMotor {
+            name "pib - Humanoid Robot (https://pib.rocks)__dof_Shoulder_right_rot"
+            maxVelocity 1.0
+            minPosition 0.00017453292519943296
+            maxPosition 6.283010774254388
+            maxTorque 10.0
+          }
+          PositionSensor {
+            name "pib - Humanoid Robot (https://pib.rocks)__dof_Shoulder_right_rot_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.181570 0.034690 0.311950
+          rotation 0.384771 0.922996 -0.005488 3.134245
+          children [
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis -0.008816 -0.008229 -0.999920
+                anchor 0.050500 0.000200 0.064190
+              }
+              device [
+                RotationalMotor {
+                  name "pib - Humanoid Robot (https://pib.rocks)__dof_Shoulder_right_tilt"
+                  maxVelocity 1.0
+                  minPosition -1.7453292519943295
+                  maxPosition 0.08726646259971647
+                  maxTorque 10.0
+                }
+                PositionSensor {
+                  name "pib - Humanoid Robot (https://pib.rocks)__dof_Shoulder_right_tilt_sensor"
+                }
+              ]
+              endPoint Solid {
+                translation 0.050500 0.000200 0.064190
+                rotation 0.536707 -0.651070 -0.536707 1.987329
+                children [
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis -0.182711 -0.983119 0.008808
+                      anchor 0.000060 0.125000 0.050720
+                    }
+                    device [
+                      RotationalMotor {
+                        name "pib - Humanoid Robot (https://pib.rocks)__dof_Upper_arm_right_rot"
+                        maxVelocity 1.0
+                        minPosition -1.5707963267948966
+                        maxPosition 1.5707963267948966
+                        maxTorque 10.0
+                      }
+                      PositionSensor {
+                        name "pib - Humanoid Robot (https://pib.rocks)__dof_Upper_arm_right_rot_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation 0.000060 0.125000 0.050720
+                      rotation -0.400872 -0.647803 -0.647806 2.379078
+                      children [
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis 0.089404 -0.159575 -0.983121
+                            anchor -0.024860 0.020130 0.090330
+                          }
+                          device [
+                            RotationalMotor {
+                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Ellbow_right_tilt"
+                              maxVelocity 1.0
+                              maxPosition 1.5707963267948966
+                              maxTorque 10.0
+                            }
+                            PositionSensor {
+                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Ellbow_right_tilt_sensor"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation -0.024860 0.020130 0.090330
+                            rotation 0.319586 -0.670022 -0.670026 2.522934
+                            children [
+                              HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis 0.067755 -0.983119 -0.169912
+                                  anchor 0.000000 0.055100 -0.031800
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Lower_arm_right_rot"
+                                    maxVelocity 1.0
+                                    minPosition -2.356194490192345
+                                    maxPosition 0.7853981633974483
+                                    maxTorque 10.0
+                                  }
+                                  PositionSensor {
+                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Lower_arm_right_rot_sensor"
+                                  }
+                                ]
+                                endPoint Solid {
+                                  translation 0.000000 0.055100 -0.031800
+                                  rotation -0.610923 -0.559811 -0.559808 2.044762
+                                  children [
+                                    Solid {
+                                      translation 0.026210 0.012760 0.195400
+                                      rotation -0.543775 0.593424 -0.593428 2.145485
+                                      children [
+                                        Solid {
+                                          translation 0.027770 -0.031590 -0.001520
+                                          rotation 0.540714 -0.540718 0.644401 1.996729
+                                          children [
+                                            Solid {
+                                              translation 0.025660 0.000000 -0.002700
+                                              rotation 0.577351 -0.577351 0.577348 2.094388
+                                              children [
+                                                Solid {
+                                                  translation 0.005730 -0.042000 -0.000850
+                                                  rotation 0.000000 -1.000000 0.000000 0.261790
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D16Thumb_proximal_upper_1"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.011402
+                                                    centerOfMass [ 0.003030 -0.020900 0.000000 ]
+                                                    inertiaMatrix [
+                                                      1.399430e-06 6.597022e-07 1.389727e-06
+                                                      2.141029e-07 4.109434e-08 -1.545297e-07
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                              name "pib - Humanoid Robot (https://pib.rocks)__D14Thumb_right_1"
+                                              physics Physics {
+                                                density -1
+                                                mass 0.010073
+                                                centerOfMass [ 0.007580 -0.017550 -0.000200 ]
+                                                inertiaMatrix [
+                                                  1.735617e-06 7.811331e-07 1.773530e-06
+                                                  4.036411e-07 -2.215757e-08 1.049440e-07
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                          name "pib - Humanoid Robot (https://pib.rocks)__D13Thumb_rotator_2"
+                                          physics Physics {
+                                            density -1
+                                            mass 0.004684
+                                            centerOfMass [ 0.005770 0.000110 -0.005160 ]
+                                            inertiaMatrix [
+                                              1.781749e-07 4.252967e-07 4.903980e-07
+                                              -1.112328e-07 -5.187788e-08 -1.857193e-08
+                                            ]
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis -0.067750 0.983122 -0.169923
+                                            anchor 0.015000 -0.074540 -0.066070
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Little_right"
+                                              maxVelocity 1.0
+                                              maxPosition 1.5707963267948966
+                                              maxTorque 10.0
+                                            }
+                                            PositionSensor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Little_right_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.015000 -0.074540 -0.066070
+                                            rotation 1.000000 0.000000 0.000000 0.314150
+                                            children [
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis -0.067750 0.882500 -0.465400
+                                                  anchor 0.000000 -0.048000 0.000000
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Little_right_2"
+                                                    maxVelocity 1.0
+                                                    maxPosition 1.5707963267948966
+                                                    maxTorque 10.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Little_right_2_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 -0.048000 0.000000
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D08Finger_distal_5"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.011981
+                                                    centerOfMass [ 0.003620 -0.021740 0.000010 ]
+                                                    inertiaMatrix [
+                                                      8.438873e-07 1.483918e-06 1.544117e-06
+                                                      -2.540666e-07 2.881957e-07 1.059663e-07
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "pib - Humanoid Robot (https://pib.rocks)__D07Finger_proximal_upper_6"
+                                            physics Physics {
+                                              density -1
+                                              mass 0.010372
+                                              centerOfMass [ 0.002070 -0.024230 0.000020 ]
+                                              inertiaMatrix [
+                                                1.219565e-06 1.314139e-06 1.789356e-06
+                                                -5.829074e-07 2.919016e-07 2.377276e-07
+                                              ]
+                                            }
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis -0.067750 0.983121 -0.169917
+                                            anchor 0.015000 -0.087610 -0.043750
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Ring_right"
+                                              maxVelocity 1.0
+                                              maxPosition 1.5707963267948966
+                                              maxTorque 10.0
+                                            }
+                                            PositionSensor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Ring_right_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.015000 -0.087610 -0.043750
+                                            rotation 1.000000 0.000000 0.000000 0.174530
+                                            children [
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis -0.067750 0.938680 -0.338050
+                                                  anchor 0.000000 -0.048000 0.000000
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Ring_right_2"
+                                                    maxVelocity 1.0
+                                                    maxPosition 1.5707963267948966
+                                                    maxTorque 10.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Ring_right_2_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 -0.048000 0.000000
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D08Finger_distal_6"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.011981
+                                                    centerOfMass [ 0.003620 -0.021740 0.000010 ]
+                                                    inertiaMatrix [
+                                                      7.883430e-07 1.470216e-06 1.613363e-06
+                                                      -2.831818e-07 1.740162e-07 6.789173e-08
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "pib - Humanoid Robot (https://pib.rocks)__D07Finger_proximal_upper_2"
+                                            physics Physics {
+                                              density -1
+                                              mass 0.010372
+                                              centerOfMass [ 0.002070 -0.024230 0.000020 ]
+                                              inertiaMatrix [
+                                                1.031452e-06 1.440266e-06 1.851343e-06
+                                                -5.932822e-07 2.341324e-07 1.544621e-07
+                                              ]
+                                            }
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis -0.067750 0.983120 -0.169910
+                                            anchor 0.015000 -0.099000 -0.017950
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Middle_right"
+                                              maxVelocity 1.0
+                                              maxPosition 1.5707963267948966
+                                              maxTorque 10.0
+                                            }
+                                            PositionSensor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Middle_right_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.015000 -0.099000 -0.017950
+                                            children [
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis -0.067750 0.983120 -0.169910
+                                                  anchor 0.000000 -0.048000 0.000000
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Middle_right_2"
+                                                    maxVelocity 1.0
+                                                    maxPosition 1.5707963267948966
+                                                    maxTorque 10.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Middle_right_2_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 -0.048000 0.000000
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D08Finger_distal_7"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.011981
+                                                    centerOfMass [ 0.003620 -0.021740 0.000010 ]
+                                                    inertiaMatrix [
+                                                      7.643012e-07 1.458355e-06 1.649266e-06
+                                                      -3.036873e-07 1.459249e-08 1.035458e-08
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "pib - Humanoid Robot (https://pib.rocks)__D05Finger_proximal_lower_3"
+                                            physics Physics {
+                                              density -1
+                                              mass 0.010372
+                                              centerOfMass [ 0.002070 -0.024230 0.000020 ]
+                                              inertiaMatrix [
+                                                8.253381e-07 1.592851e-06 1.904871e-06
+                                                -5.441304e-07 1.075949e-07 5.518879e-08
+                                              ]
+                                            }
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis -0.067750 0.983120 -0.169916
+                                            anchor 0.015000 -0.087610 0.007840
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Index_right"
+                                              maxVelocity 1.0
+                                              maxPosition 1.5707963267948966
+                                              maxTorque 10.0
+                                            }
+                                            PositionSensor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Index_right_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.015000 -0.087610 0.007840
+                                            rotation -1.000000 0.000000 0.000000 0.174530
+                                            children [
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis -0.067750 0.997690 0.003380
+                                                  anchor 0.000000 -0.048000 0.000000
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Index_right_2"
+                                                    maxVelocity 1.0
+                                                    maxPosition 1.5707963267948966
+                                                    maxTorque 10.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Index_right_2_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 -0.048000 0.000000
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D08Finger_distal_8"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.011981
+                                                    centerOfMass [ 0.003620 -0.021740 0.000010 ]
+                                                    inertiaMatrix [
+                                                      7.930960e-07 1.453653e-06 1.625173e-06
+                                                      -3.043246e-07 -1.453540e-07 -5.170894e-08
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "pib - Humanoid Robot (https://pib.rocks)__D05Finger_proximal_lower_4"
+                                            physics Physics {
+                                              density -1
+                                              mass 0.010372
+                                              centerOfMass [ 0.002070 -0.024230 0.000020 ]
+                                              inertiaMatrix [
+                                                6.843650e-07 1.723937e-06 1.914758e-06
+                                                -4.302093e-07 -5.864912e-08 -1.713224e-08
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "pib - Humanoid Robot (https://pib.rocks)__D02Palm_right_1"
+                                      physics Physics {
+                                        density -1
+                                        mass 0.195554
+                                        centerOfMass [ 0.013730 -0.038550 -0.025320 ]
+                                        inertiaMatrix [
+                                          9.307530e-05 1.360733e-04 1.900539e-04
+                                          -1.525506e-05 2.082207e-05 1.452027e-05
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                  name "pib - Humanoid Robot (https://pib.rocks)__C18Forearm_distal_bottom_1"
+                                  physics Physics {
+                                    density -1
+                                    mass 0.349062
+                                    centerOfMass [ 0.000120 0.001420 0.070580 ]
+                                    inertiaMatrix [
+                                      1.342379e-03 1.326884e-03 4.331265e-04
+                                      -3.581435e-05 -3.163217e-05 -1.882540e-04
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "pib - Humanoid Robot (https://pib.rocks)__C08Central_rotator_bracket_8"
+                            physics Physics {
+                              density -1
+                              mass 0.000000
+                            }
+                          }
+                        }
+                      ]
+                      name "pib - Humanoid Robot (https://pib.rocks)__C10RElbow_right_1"
+                      physics Physics {
+                        density -1
+                        mass 0.067151
+                        centerOfMass [ 0.000000 0.000010 0.020370 ]
+                        inertiaMatrix [
+                          3.268023e-05 3.025574e-05 3.280661e-05
+                          -9.125107e-07 8.333755e-08 4.956530e-07
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "pib - Humanoid Robot (https://pib.rocks)__C04Shoulder_rotator_left_1"
+                physics Physics {
+                  density -1
+                  mass 0.477227
+                  centerOfMass [ 0.010590 0.043320 0.050550 ]
+                  inertiaMatrix [
+                    9.657894e-04 8.359912e-04 1.188465e-03
+                    1.361201e-04 -1.288556e-04 -3.393017e-05
+                  ]
+                }
+              }
+            }
+          ]
+          name "pib - Humanoid Robot (https://pib.rocks)__C02Shoulder_base_2"
+          physics Physics {
+            density -1
+            mass 0.334467
+            centerOfMass [ 0.000140 -0.001590 0.031940 ]
+            inertiaMatrix [
+              5.579649e-04 5.568986e-04 5.968083e-04
+              1.487576e-05 1.073943e-05 1.311643e-05
+            ]
+          }
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          position 2.312561
+          axis 0.000009 -0.000009 0.999993
+          anchor 0.190020 0.032920 0.311800
+        }
+        device [
+          RotationalMotor {
+            name "pib - Humanoid Robot (https://pib.rocks)__dof_Shoulder_left_rot"
+            maxVelocity 1.0
+            minPosition 1.4835298641951802
+            maxPosition 3.141592653589793
+            maxTorque 10.0
+          }
+          PositionSensor {
+            name "pib - Humanoid Robot (https://pib.rocks)__dof_Shoulder_left_rot_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation 0.190020 0.032920 0.311800
+          rotation 0.999695 -0.024327 -0.004221 3.131655
+          children [
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                axis -0.008214 0.008809 -0.999919
+                anchor -0.050500 0.000200 0.064190
+              }
+              device [
+                RotationalMotor {
+                  name "pib - Humanoid Robot (https://pib.rocks)__dof_Shoulder_left_tilt"
+                  maxVelocity 1.0
+                  minPosition -1.7453292519943295
+                  maxPosition 0.08726646259971647
+                  maxTorque 10.0
+                }
+                PositionSensor {
+                  name "pib - Humanoid Robot (https://pib.rocks)__dof_Shoulder_left_tilt_sensor"
+                }
+              ]
+              endPoint Solid {
+                translation -0.050500 0.000200 0.064190
+                rotation 0.610901 0.503587 0.610901 2.208554
+                children [
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis -0.182132 -0.983231 -0.008230
+                      anchor 0.000060 0.125000 0.050170
+                    }
+                    device [
+                      RotationalMotor {
+                        name "pib - Humanoid Robot (https://pib.rocks)__dof_Upper_arm_left_rot"
+                        maxVelocity 1.0
+                        minPosition -1.5707963267948966
+                        maxPosition 1.5707963267948966
+                        maxTorque 10.0
+                      }
+                      PositionSensor {
+                        name "pib - Humanoid Robot (https://pib.rocks)__dof_Upper_arm_left_rot_sensor"
+                      }
+                    ]
+                    endPoint Solid {
+                      translation 0.000060 0.125000 0.050170
+                      rotation -0.755704 -0.463095 -0.463092 1.847303
+                      children [
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis -0.090018 -0.158555 -0.983230
+                            anchor 0.024860 -0.020130 0.090330
+                          }
+                          device [
+                            RotationalMotor {
+                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Ellbow_left_tilt"
+                              maxVelocity 1.0
+                              maxPosition 1.5707963267948966
+                              maxTorque 10.0
+                            }
+                            PositionSensor {
+                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Ellbow_left_tilt_sensor"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation 0.024860 -0.020130 0.090330
+                            rotation 0.829025 0.395421 0.395423 1.757206
+                            children [
+                              HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  position -1.832596
+                                  axis -0.179862 -0.983231 0.029815
+                                  anchor 0.000000 0.055100 -0.031800
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Lower_arm_left_rot"
+                                    maxVelocity 1.0
+                                    minPosition -3.4033920413889422
+                                    maxPosition -0.2617993877991494
+                                    maxTorque 10.0
+                                  }
+                                  PositionSensor {
+                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Lower_arm_left_rot_sensor"
+                                  }
+                                ]
+                                endPoint Solid {
+                                  translation 0.000000 0.055100 -0.031800
+                                  rotation -0.949709 0.306588 0.063695 1.437083
+                                  children [
+                                    Solid {
+                                      translation -0.023290 0.017530 0.195400
+                                      rotation 0.537068 -0.596470 -0.596474 2.155867
+                                      children [
+                                        Solid {
+                                          translation 0.027770 0.031580 -0.001420
+                                          rotation -0.540714 -0.540718 -0.644401 1.996729
+                                          children [
+                                            Solid {
+                                              translation 0.025660 0.000000 -0.002700
+                                              rotation -0.577351 0.577351 0.577348 2.094388
+                                              children [
+                                                Solid {
+                                                  translation -0.005730 -0.042000 -0.000850
+                                                  rotation -0.000002 1.000000 -0.000002 3.403383
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D16Thumb_proximal_upper_2"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.011402
+                                                    centerOfMass [ 0.003030 -0.020900 0.000000 ]
+                                                    inertiaMatrix [
+                                                      1.037437e-06 1.132476e-06 1.278945e-06
+                                                      3.674287e-07 -2.342147e-07 2.162956e-07
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                              name "pib - Humanoid Robot (https://pib.rocks)__D15Thumb_left_1"
+                                              physics Physics {
+                                                density -1
+                                                mass 0.010018
+                                                centerOfMass [ -0.007610 -0.017500 -0.000210 ]
+                                                inertiaMatrix [
+                                                  9.983054e-07 1.520229e-06 1.752738e-06
+                                                  5.512181e-07 -1.374266e-07 1.212453e-07
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                          name "pib - Humanoid Robot (https://pib.rocks)__D13Thumb_rotator_1"
+                                          physics Physics {
+                                            density -1
+                                            mass 0.004684
+                                            centerOfMass [ 0.005770 0.000110 -0.005160 ]
+                                            inertiaMatrix [
+                                              3.903510e-07 2.352775e-07 4.682411e-07
+                                              -1.352616e-07 -5.491827e-08 -8.464370e-08
+                                            ]
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.179870 -0.983236 -0.029809
+                                            anchor 0.015000 0.074530 -0.065970
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Little_left"
+                                              maxVelocity 1.0
+                                              maxPosition 1.5707963267948966
+                                              maxTorque 10.0
+                                            }
+                                            PositionSensor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Little_left_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.015000 0.074530 -0.065970
+                                            rotation 1.000000 0.000000 0.000000 2.827430
+                                            children [
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.179870 0.925900 0.332190
+                                                  anchor 0.000000 -0.048000 0.000000
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Little_left_2"
+                                                    maxVelocity 1.0
+                                                    maxPosition 1.5707963267948966
+                                                    maxTorque 10.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Little_left_2_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 -0.048000 0.000000
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D08Finger_distal_1"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.011981
+                                                    centerOfMass [ 0.003620 -0.021740 0.000010 ]
+                                                    inertiaMatrix [
+                                                      1.292310e-06 1.153656e-06 1.425956e-06
+                                                      -3.459175e-07 2.476002e-07 3.315557e-07
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "pib - Humanoid Robot (https://pib.rocks)__D05Finger_proximal_lower_5"
+                                            physics Physics {
+                                              density -1
+                                              mass 0.010372
+                                              centerOfMass [ 0.002070 -0.024230 0.000020 ]
+                                              inertiaMatrix [
+                                                1.547673e-06 1.393177e-06 1.382210e-06
+                                                -4.016768e-07 4.074447e-07 4.998511e-07
+                                              ]
+                                            }
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.179870 -0.983235 -0.029816
+                                            anchor 0.015000 0.087600 -0.043650
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Ring_left"
+                                              maxVelocity 1.0
+                                              maxPosition 1.5707963267948966
+                                              maxTorque 10.0
+                                            }
+                                            PositionSensor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Ring_left_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.015000 0.087600 -0.043650
+                                            rotation 1.000000 0.000000 0.000000 2.967060
+                                            children [
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.179870 0.963120 0.200100
+                                                  anchor 0.000000 -0.048000 0.000000
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Ring_left_2"
+                                                    maxVelocity 1.0
+                                                    maxPosition 1.5707963267948966
+                                                    maxTorque 10.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Ring_left_2_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 -0.048000 0.000000
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D08Finger_distal_2"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.011981
+                                                    centerOfMass [ 0.003620 -0.021740 0.000010 ]
+                                                    inertiaMatrix [
+                                                      1.278307e-06 1.065852e-06 1.527764e-06
+                                                      -3.890259e-07 1.830267e-07 2.667177e-07
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "pib - Humanoid Robot (https://pib.rocks)__D05Finger_proximal_lower_6"
+                                            physics Physics {
+                                              density -1
+                                              mass 0.010372
+                                              centerOfMass [ 0.002070 -0.024230 0.000020 ]
+                                              inertiaMatrix [
+                                                1.407021e-06 1.235543e-06 1.680497e-06
+                                                -5.500540e-07 3.252917e-07 3.832175e-07
+                                              ]
+                                            }
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.179870 -0.983230 -0.029823
+                                            anchor 0.015000 0.098980 -0.017850
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Middle_left"
+                                              maxVelocity 1.0
+                                              maxPosition 1.5707963267948966
+                                              maxTorque 10.0
+                                            }
+                                            PositionSensor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Middle_left_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.015000 0.098980 -0.017850
+                                            rotation -1.000000 0.000000 0.000000 3.141590
+                                            children [
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.179870 0.983230 0.029820
+                                                  anchor 0.000000 -0.048000 0.000000
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Middle_left_2"
+                                                    maxVelocity 1.0
+                                                    maxPosition 1.5707963267948966
+                                                    maxTorque 10.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Middle_left_2_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 -0.048000 0.000000
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D08Finger_distal_3"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.011981
+                                                    centerOfMass [ 0.003620 -0.021740 0.000010 ]
+                                                    inertiaMatrix [
+                                                      1.278095e-06 9.792402e-07 1.614587e-06
+                                                      -4.206379e-07 8.978904e-08 1.529710e-07
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "pib - Humanoid Robot (https://pib.rocks)__D07Finger_proximal_upper_8"
+                                            physics Physics {
+                                              density -1
+                                              mass 0.010372
+                                              centerOfMass [ 0.002070 -0.024230 0.000020 ]
+                                              inertiaMatrix [
+                                                1.286451e-06 1.138123e-06 1.898486e-06
+                                                -6.584329e-07 9.743195e-08 1.133938e-07
+                                              ]
+                                            }
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.179870 -0.983229 -0.029819
+                                            anchor 0.015000 0.087600 0.007950
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Index_left"
+                                              maxVelocity 1.0
+                                              maxPosition 1.5707963267948966
+                                              maxTorque 10.0
+                                            }
+                                            PositionSensor {
+                                              name "pib - Humanoid Robot (https://pib.rocks)__dof_Index_left_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.015000 0.087600 0.007950
+                                            rotation -1.000000 0.000000 0.000000 2.967060
+                                            children [
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.179870 0.973470 -0.141370
+                                                  anchor 0.000000 -0.048000 0.000000
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Index_left_2"
+                                                    maxVelocity 1.0
+                                                    maxPosition 1.5707963267948966
+                                                    maxTorque 10.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "pib - Humanoid Robot (https://pib.rocks)__dof_Index_left_2_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 -0.048000 0.000000
+                                                  name "pib - Humanoid Robot (https://pib.rocks)__D09Finger_tip_1"
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 0.014614
+                                                    centerOfMass [ 0.004460 -0.025410 0.000010 ]
+                                                    inertiaMatrix [
+                                                      1.677867e-06 1.688200e-06 2.647183e-06
+                                                      -8.358263e-07 -8.831662e-08 -3.867677e-08
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "pib - Humanoid Robot (https://pib.rocks)__D05Finger_proximal_lower_8"
+                                            physics Physics {
+                                              density -1
+                                              mass 0.010372
+                                              centerOfMass [ 0.002070 -0.024230 0.000020 ]
+                                              inertiaMatrix [
+                                                1.263647e-06 1.193518e-06 1.865896e-06
+                                                -6.405714e-07 -1.856667e-07 -1.869389e-07
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "pib - Humanoid Robot (https://pib.rocks)__D03Hand_back_left_1"
+                                      physics Physics {
+                                        density -1
+                                        mass 0.195556
+                                        centerOfMass [ 0.013730 0.038540 -0.025260 ]
+                                        inertiaMatrix [
+                                          1.193145e-04 1.023295e-04 1.975552e-04
+                                          -2.458267e-05 -1.068242e-05 1.149760e-05
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                  name "pib - Humanoid Robot (https://pib.rocks)__C19Forearm_distal_top_2"
+                                  physics Physics {
+                                    density -1
+                                    mass 0.349062
+                                    centerOfMass [ 0.000150 0.001420 0.070580 ]
+                                    inertiaMatrix [
+                                      1.389505e-03 1.307082e-03 4.058015e-04
+                                      -5.000433e-05 1.351055e-04 -6.682768e-05
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                            name "pib - Humanoid Robot (https://pib.rocks)__C13Elbow_shell_lower_dorsal_2"
+                            physics Physics {
+                              density -1
+                              mass 0.000000
+                            }
+                          }
+                        }
+                      ]
+                      name "pib - Humanoid Robot (https://pib.rocks)__C10RElbow_right_2"
+                      physics Physics {
+                        density -1
+                        mass 0.067151
+                        centerOfMass [ 0.000000 0.000010 0.020370 ]
+                        inertiaMatrix [
+                          3.274648e-05 3.021218e-05 3.278391e-05
+                          8.579849e-07 -1.970225e-07 4.518859e-07
+                        ]
+                      }
+                    }
+                  }
+                ]
+                name "pib - Humanoid Robot (https://pib.rocks)__C27Arm_shell_lateral_major_1"
+                physics Physics {
+                  density -1
+                  mass 0.477227
+                  centerOfMass [ 0.010590 0.043320 0.050410 ]
+                  inertiaMatrix [
+                    1.033212e-03 8.642882e-04 1.092756e-03
+                    -1.835900e-04 -1.276448e-04 6.445602e-05
+                  ]
+                }
+              }
+            }
+          ]
+          name "pib - Humanoid Robot (https://pib.rocks)__C01Shoulder_head_2"
+          physics Physics {
+            density -1
+            mass 0.334467
+            centerOfMass [ 0.000140 0.001850 0.031940 ]
+            inertiaMatrix [
+              5.578442e-04 5.578577e-04 5.962927e-04
+              -1.510201e-05 9.510575e-06 -1.577420e-05
+            ]
+          }
+        }
+      }
+      Solid {
+        translation 0.005040 0.033270 0.360370
+        rotation 0.999994 -0.002297 -0.002675 1.582857
+        children [
+          Solid {
+            translation 0.000000 0.035000 0.000000
+            rotation 0.000000 1.000000 0.000000 1.570790
+            children [
+              Solid {
+                translation 0.000000 0.077500 -0.000080
+                rotation 0.577349 -0.577355 0.577346 2.094382
+                name "pib - Humanoid Robot (https://pib.rocks)__A02Head_board_mount_1"
+                physics Physics {
+                  density -1
+                  mass 0.077152
+                  centerOfMass [ 0.000000 0.000010 -0.004900 ]
+                  inertiaMatrix [
+                    3.055917e-05 1.841365e-04 2.142480e-04
+                    7.685562e-07 7.355589e-08 -3.667776e-07
+                  ]
+                }
+              }
+            ]
+            name "pib - Humanoid Robot (https://pib.rocks)__A15Neck_ballbearing_holder_leg_2"
+            physics Physics {
+              density -1
+              mass 0.138690
+              centerOfMass [ 0.000000 0.045310 -0.000510 ]
+              inertiaMatrix [
+                9.059572e-05 9.222978e-05 9.642218e-05
+                -2.937720e-06 1.970813e-07 -4.427616e-08
+              ]
+            }
+          }
+        ]
+        name "pib - Humanoid Robot (https://pib.rocks)__S02Neck_sim_middle_1"
+        physics Physics {
+          density -1
+          mass 0.027129
+          centerOfMass [ 0.002620 0.017500 -0.002620 ]
+          inertiaMatrix [
+            7.931763e-06 2.486393e-06 7.895781e-06
+            9.967503e-07 1.939384e-07 -1.093532e-06
+          ]
+        }
+      }
+    ]
+    name IS name
+    physics Physics {
+      density -1
+      mass 86.041461
+      centerOfMass [ 0.001960 0.032820 -0.311240 ]
+      inertiaMatrix [
+        1.575068e+00 1.911908e+00 5.457422e-01
+        7.608786e-05 1.193088e-04 9.131065e-03
+      ]
+    }
+  }
+}
